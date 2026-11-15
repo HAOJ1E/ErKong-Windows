@@ -1,0 +1,39 @@
+# Python 环境、缓存和测试输出
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# 个人训练、蓝牙记录、会话状态及本机运行报告
+/settings/
+/reports/
+*.log
+
+# 构建产物和下载的模型；由安装脚本重新获取
+/build/
+/dist/
+*.spec
+/models/*.task
+/models/*.download
+/models/face_landmarker.json
+
+# 只保留附带许可的研究参考代码，不上传安装包或整份第三方仓库
+/research/*
+!/research/source-excerpts/
+
+# 本地凭据和编辑器文件
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini
