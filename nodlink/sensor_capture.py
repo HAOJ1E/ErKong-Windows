@@ -132,7 +132,7 @@ def capture(
         report["status"] = "interrupted"
     except (CaptureBusyError, AapOpenError) as error:
         hint = (
-            "请先停止其他 NodLink 窗口的训练或鼠标控制，再重试。"
+            "请先停止其他耳控窗口的训练或鼠标控制，再重试。"
             if isinstance(error, CaptureBusyError)
             else "请完全退出系统托盘中的 WPods 图形客户端，并停止其他耳机采集程序，然后重试。WPodsService 后台服务需要保持运行。"
         )

@@ -1,4 +1,4 @@
-"""NodLink 初始硬件检测窗口。"""
+"""耳控初始硬件检测窗口。"""
 
 from datetime import datetime
 from pathlib import Path
@@ -49,7 +49,7 @@ class MainWindow(QMainWindow):
 
     def __init__(self) -> None:
         super().__init__()
-        self.setWindowTitle("NodLink Windows · 运动通道诊断")
+        self.setWindowTitle("耳控 Windows · 运动通道诊断")
         self.resize(920, 820)
         self.setMinimumSize(760, 680)
         self._worker: DetectionWorker | None = None
@@ -70,7 +70,7 @@ class MainWindow(QMainWindow):
         root.setContentsMargins(26, 22, 26, 22)
         root.setSpacing(16)
 
-        title = QLabel("NodLink Windows")
+        title = QLabel("耳控 Windows")
         title.setObjectName("title")
         subtitle = QLabel("AirPods 4 · 运动通道诊断与头部鼠标控制")
         subtitle.setObjectName("subtitle")
@@ -281,7 +281,7 @@ class MainWindow(QMainWindow):
             QStandardPaths.StandardLocation.DocumentsLocation
         )
         save_folder = Path(documents_folder) if documents_folder else Path.home()
-        default_name = f"NodLink-检测报告-{datetime.now():%Y%m%d-%H%M%S}.json"
+        default_name = f"耳控-检测报告-{datetime.now():%Y%m%d-%H%M%S}.json"
         default_path = str(save_folder / default_name)
         selected_path, _ = QFileDialog.getSaveFileName(
             self,

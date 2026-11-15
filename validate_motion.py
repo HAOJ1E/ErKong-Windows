@@ -7,7 +7,7 @@ from nodlink.validation_window import ValidationWindow
 
 def main():
     app = QApplication(sys.argv)
-    app.setApplicationName("NodLink Motion Validation")
+    app.setApplicationName("耳控动作验证")
     window = ValidationWindow()
     window.show()
     return app.exec()

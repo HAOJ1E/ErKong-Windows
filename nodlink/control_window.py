@@ -73,7 +73,7 @@ class MouseControlWindow(QMainWindow):
     def __init__(self, settings_folder: Path = SETTINGS_FOLDER, initial_runtime_status: dict | None = None, bridge_manager=None):
         super().__init__()
         self.settings_folder = settings_folder
-        self.setWindowTitle("NodLink · 自动训练与头部鼠标控制")
+        self.setWindowTitle("耳控 · 自动训练与头部鼠标控制")
         self.resize(820, min(850, self.screen().availableGeometry().height() - 40))
         self._worker = None
         self._bridge_manager = bridge_manager or BridgeRecovery(settings_folder)

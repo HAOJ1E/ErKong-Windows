@@ -1,4 +1,4 @@
-"""NodLink Windows 头部追踪项目的桌面程序入口。"""
+"""耳控 Windows 头部追踪项目的桌面程序入口。"""
 
 import sys
 
@@ -14,8 +14,8 @@ def main() -> int:
     if helper_result is not None:
         return helper_result
     app = QApplication(sys.argv)
-    app.setApplicationName("NodLink Windows")
-    app.setOrganizationName("NodLink")
+    app.setApplicationName("耳控 Windows")
+    app.setOrganizationName("耳控")
 
     window = MainWindow()
     window.show()

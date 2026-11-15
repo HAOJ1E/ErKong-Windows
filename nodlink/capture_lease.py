@@ -1,4 +1,4 @@
-"""跨进程保护 NodLink 的采集通道；进程退出后由 Windows 释放占用。"""
+"""跨进程保护耳控的采集通道；进程退出后由 Windows 释放占用。"""
 
 import ctypes
 from ctypes import wintypes
@@ -8,7 +8,7 @@ class CaptureBusyError(RuntimeError):
     code = 170
 
     def __init__(self):
-        super().__init__("另一个 NodLink 采集任务正在运行，请先停止该窗口的训练或控制")
+        super().__init__("另一个耳控采集任务正在运行，请先停止该窗口的训练或控制")
 
 
 class CaptureLease:

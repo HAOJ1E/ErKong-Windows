@@ -1,4 +1,4 @@
-"""独立打开 NodLink 头部鼠标控制窗口。"""
+"""独立打开耳控头部鼠标控制窗口。"""
 
 import sys
 
@@ -15,8 +15,8 @@ def main() -> int:
     if helper_result is not None:
         return helper_result
     app = QApplication(sys.argv)
-    app.setApplicationName("NodLink 头部鼠标控制")
-    app.setOrganizationName("NodLink")
+    app.setApplicationName("耳控头部鼠标控制")
+    app.setOrganizationName("耳控")
     window = MouseControlWindow()
     window.show()
     # 仅显式命令参数触发桥接连接；不会勾选准备框或启动鼠标。

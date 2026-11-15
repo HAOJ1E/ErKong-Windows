@@ -47,7 +47,7 @@ class ChannelOwnershipTests(unittest.TestCase):
             report = capture("service16", 1, retain_evidence=False)
         self.assertEqual(report["status"], "channel_busy")
         self.assertEqual(report["error_code"], 170)
-        self.assertIn("NodLink", report["recovery_hint"])
+        self.assertIn("耳控", report["recovery_hint"])
         bridge.assert_not_called()
         lease.return_value.close.assert_called_once()
 

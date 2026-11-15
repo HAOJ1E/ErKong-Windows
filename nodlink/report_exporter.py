@@ -1,4 +1,4 @@
-"""生成并导出 NodLink 本地设备检测报告。"""
+"""生成并导出耳控本地设备检测报告。"""
 
 import json
 from datetime import datetime
@@ -19,7 +19,7 @@ def build_report(
 ) -> dict:
     """整理报告内容，明确记录蓝牙与传感器检测范围。"""
     return {
-        "report_name": "NodLink Windows 设备检测报告",
+        "report_name": "耳控 Windows 设备检测报告",
         "generated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
         "system_info": system_info,
         "bluetooth": {

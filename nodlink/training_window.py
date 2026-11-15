@@ -124,7 +124,7 @@ class TrainingWindow(QMainWindow):
                  initial_runtime_status: dict | None = None):
         super().__init__(parent)
         self.settings_folder, self.reports_folder = settings_folder, reports_folder
-        self.setWindowTitle("NodLink · 自动训练与独立复测")
+        self.setWindowTitle("耳控 · 自动训练与独立复测")
         self.resize(760, 720)
         self.worker = None
         self.save_worker = None

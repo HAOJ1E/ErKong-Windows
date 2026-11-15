@@ -49,7 +49,7 @@ class ValidationWorker(QThread):
 class ValidationWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("NodLink · AirPods 4 动作验证")
+        self.setWindowTitle("耳控 · AirPods 4 动作验证")
         self.resize(820, 670)
         self._worker = None
         self._started = None

@@ -203,7 +203,7 @@ class BridgeRecovery:
             if policy.get("restart_required") and policy.get("restart_boot_time") == current_boot_time():
                 raise BridgeRestartRequired("本次 Windows 尚未重新启动，暂不重复重置虚拟控制器。请保存工作并重启电脑后再启用头追。")
             if policy.get("mode") in ("bridge", "enabling", "recovery_required") and policy.get("session_token") != self.token and process_is_alive(owner):
-                raise RuntimeError("另一个 NodLink 窗口正在使用桥接，请返回那个窗口操作")
+                raise RuntimeError("另一个耳控窗口正在使用桥接，请返回那个窗口操作")
             self._policy("enabling")
             self.owns_bridge = touched = True
             self.guard_process = self.guard_starter()
@@ -271,7 +271,7 @@ class BridgeRecovery:
             except (OSError, ValueError):
                 policy = {}
             if policy.get("mode") in ("bridge", "enabling", "recovery_required") and policy.get("session_token") != self.token and process_is_alive(int(policy.get("owner_pid") or 0)):
-                raise RuntimeError("另一个 NodLink 窗口正在使用桥接，请在那个窗口恢复普通蓝牙")
+                raise RuntimeError("另一个耳控窗口正在使用桥接，请在那个窗口恢复普通蓝牙")
             touched = True
             self.owns_bridge = True
             progress("正在关闭桥接并恢复普通蓝牙…")

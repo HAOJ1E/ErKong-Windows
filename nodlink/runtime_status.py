@@ -35,7 +35,7 @@ def read_pause_policy() -> dict | None:
         if policy.get("mode") != "bridge":
             raise ValueError("未知的桥接运行模式")
         if policy.get("owner_pid") and int(policy["owner_pid"]) != os.getpid():
-            return {"ready": False, "status": "bridge_other_session", "summary": "桥接由另一个 NodLink 窗口管理",
+            return {"ready": False, "status": "bridge_other_session", "summary": "桥接由另一个耳控窗口管理",
                     "detail": "请在启用桥接的那个窗口训练；若原窗口已退出，可在此重新启用。"}
         return None
     except FileNotFoundError:
