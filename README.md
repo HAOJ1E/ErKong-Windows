@@ -64,6 +64,13 @@ flowchart LR
 - 普通版 AirPods 4，以及兼容的蓝牙与桥接环境。
 - 眨眼单击为可选功能，需要可被 Windows 正常识别的摄像头。
 
+获取项目源码：
+
+```powershell
+git clone https://github.com/HAOJ1E/NodLink-Python.git
+cd NodLink-Python
+```
+
 在项目目录执行：
 
 ```powershell
